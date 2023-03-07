@@ -5,6 +5,8 @@ What we also can do is add task already written to our main view.
 these tasks includes some phrases from popular movies or games.
 The idea for this kind os app came from fridge magnet i recevied from a friend of mine.
 If you have a creative task idea add it :)
-Feedback is welcome
+Feedback is welcome.
 Enjoy :D
+
+demo here https://emas170.github.io/popcultureapp/
 
