@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --mainColor: #FFAF59;
+    --hamburgerColor: #964B00;
+    --modalColor: #e96d07
+}
+
+body {
+    background: var(--mainColor);
+    margin: 0;
+    display: grid;
+    place-content: center;
+    grid-auto-flow: column;
+    gap: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#todo_list {
+    width: 1000px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 38px;
+    letter-spacing: 0.4px;
+    margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#add-input {
+    border-radius: 7px 0px;
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 40%;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid var(--hamburgerColor);
+}
+#items_list {
+    list-style-type: none;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+.item, .old-item {
+    background: #f0f0e6;
+    padding: 15px;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 30px;
+    box-shadow: 0px 0px 7px 1px rgba(66, 68, 90, 1);
+}
+
+.del-btn, .add-btn {
+    font-family: system-ui, sans-serif;
+    cursor: pointer;
+    padding: .1em .6em;
+    font-weight: bold;  
+    border: none;
+    border-radius: 15px;
+    --c:  #f10a0a; /* the color*/
+    
+    box-shadow: 0 0 0 .1em inset var(--c); 
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: 
+    var(--_g) calc(var(--_p,0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p,0%)) 0%,
+    var(--_g) calc(var(--_p,0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+}
+.del-btn:hover, .add-btn:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+}
+.del-btn:active, .add-btn:active {
+    box-shadow: 0 0 9e9q inset #0009; 
+    background-color: var(--c);
+    color: #fff;
+}

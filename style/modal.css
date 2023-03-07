@@ -1,0 +1,133 @@
+.burger {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 45px;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+span {
+    position: absolute;
+    width: 100%;
+    height: 7px;
+    background-color: var(--hamburgerColor);
+    left: 0;
+    transition: top 0.2s 0.2s, bottom 0.2s 0.2s, opacity 0.2s, transform 0.2s 0.4s linear;
+}
+      
+span:nth-child(1) {
+    top: 0;
+}
+      
+span:nth-child(2) {
+    top: calc(50% - 5px);
+}
+      
+span:nth-child(3) { 
+    bottom: 0;
+}
+      
+.burger.active {
+    transform: rotate(-90deg);   
+}
+.burger.active span:nth-child(1) {
+    top: calc(50% - 5px);
+    transform: rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+.burger.active span:nth-child(3) {
+    bottom: calc(50% - 5px);
+    transform: rotate(-45deg);
+}
+
+aside {
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: -660px;
+    width: 600px;
+    background-color: var(--modalColor);
+    transition: 0.3s linear;
+    box-shadow: 0px 0px 7px 1px rgba(66, 68, 90, 1);
+    border-radius: 50px;
+    overflow: hidden;
+
+}
+.burger.active + aside {
+    left: 30px;
+}
+.add-ideas {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.btn-disabled {
+    background: #585858;
+    color: white;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.ideas {
+    width: 75%;
+}
+
+#starwars {
+    font-family: 'Audiowide', cursive;
+    font-size: 17px;
+}
+#train {
+    font-family: 'Iceland', cursive;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+#daleks {
+    font-family: 'Tilt Warp', cursive;
+    font-size: 22px;
+}
+#lotr {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 24px;
+}
+#harrypotter {
+    font-family: 'Mystery Quest', cursive;
+    font-size: 20px;
+}
+#avengers {
+    font-family: 'Bangers', cursive;
+    font-size: 25px;
+}
+#got {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 20px;
+}
+#batman {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 19px;
+}
+#vikings {
+    font-family: 'Amatic SC', cursive;
+    font-size: 22px;
+    letter-spacing: 10px;
+}
+#startrek {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+#breakingbad {
+    font-family: 'Special Elite', cursive;
+    font-size: 22px;
+}
+#cyberpunk {
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
